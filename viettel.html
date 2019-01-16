@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var soViettel = ["0168323565", "0123456798", "0244785512", "0985456621", "0973717845", "0168325124","8542136954",
+        "0123456789", "0944785526", "0986456123", "2587984612", "7894561230", "0132478963", "497822614", "0349604565"];
+        var regexp = /^[0]([3][2-9]|[9][6-8]|[8][6])[0-9]{7}$/;
+        var count = 0;
+        var nums = [];
+        var check = true;
+
+        for (var i = 0; i < soViettel.length; i++){
+            if (regexp.test(soViettel[i])){
+                count ++;
+                nums.push(soViettel[i] + " ");
+                check = true;
+            }
+        }
+
+        if (check = true){
+            document.write("Co " + count + "so viettel " + nums)
+        }
+        else {
+            document.write("Khong co so viettel nao")
+        }
+
+    </script>
+</body>
+</html>
